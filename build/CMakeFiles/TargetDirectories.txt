@@ -1,0 +1,8 @@
+/home/umosse/Documents/my_home/Documents/scop/build/CMakeFiles/scop.dir
+/home/umosse/Documents/my_home/Documents/scop/build/CMakeFiles/edit_cache.dir
+/home/umosse/Documents/my_home/Documents/scop/build/CMakeFiles/rebuild_cache.dir
+/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/CMakeFiles/SDL3-shared.dir
+/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/CMakeFiles/SDL3_test.dir
+/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/CMakeFiles/SDL_uclibc.dir
+/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/CMakeFiles/edit_cache.dir
+/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/CMakeFiles/rebuild_cache.dir

@@ -21,13 +21,18 @@ void	Models::parsing_obj(const std::string &filename)
 	{
 		pos = str.find(" ");
 		type = str.substr(0, pos);
+		float	tmp;
 		if (type == "v")
 		{
 			std::istringstream	iss(str.substr(pos + 1));
+			while (iss >> tmp)
+				vertices.push_back(tmp);
 		}
 		if (type == "f")
 		{
-			
+			std::istringstream	iss(str.substr(pos + 1));
+			while (iss >> tmp)
+				vertices_index.push_back(tmp);
 		}
 	}
 }

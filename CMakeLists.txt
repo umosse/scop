@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(scop
 	srcs/main.cpp
-	srcs/render.cpp
+	srcs/Render.cpp
+	srcs/Models.cpp
 	third_party/glad/src/glad.c
 )
 
