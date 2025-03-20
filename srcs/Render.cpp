@@ -1,5 +1,6 @@
 #include "../includes/Render.hpp"
 #include "SDL3/SDL_oldnames.h"
+#include <cstdlib>
 
 Render::Render()
 {
@@ -9,12 +10,19 @@ Render::Render()
 		return ;
 	}
 
+	// SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG);
+	// SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+	// SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+	// SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
 	window = SDL_CreateWindow("scop", width, height, SDL_WINDOW_OPENGL);
 	GLContext = SDL_GL_CreateContext(window);
 	running = true;
 	SDL_GL_MakeCurrent(window, GLContext);
 	if (!gladLoadGLLoader(GLADloadproc(SDL_GL_GetProcAddress)))
-		std::cerr << "nope\n";
+	{
+		std::cerr << "thisnope\n";
+		exit(1);
+	}
 }
 
 Render::~Render()
