@@ -1,4 +1,4 @@
-# Install script for directory: /home/umosse/Documents/my_home/Documents/scop/third_party/SDL
+# Install script for directory: /home/umosse/lecode/scop/third_party/SDL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

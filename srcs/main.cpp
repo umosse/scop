@@ -33,10 +33,15 @@ int	main(int argc, char** argv)
 		vertexShader = glCreateShader(GL_VERTEX_SHADER);
 		glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 		glCompileShader(vertexShader);
-		if (glGetError() != 0) {
-			std::cerr << "nope\n";
-			return 1;
+		int success;
+		char	infoLog[512];
+		glGetProgramiv(vertexShader, GL_LINK_STATUS, &success);
+		if(!success) {
+			glGetProgramInfoLog(vertexShader, 512, NULL, infoLog);
+			std::cerr << "first shader\n";
+			std::cerr << infoLog << "\n";
 		}
+
 		shadertmp.clear();
 
 
@@ -56,21 +61,23 @@ int	main(int argc, char** argv)
 		fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 		glCompileShader(fragmentShader);
-		if (glGetError() != 0) {
-			std::cerr << "nope\n";
-			return 1;
+		glGetProgramiv(fragmentShader, GL_LINK_STATUS, &success);
+		if(!success) {
+			glGetProgramInfoLog(fragmentShader, 512, NULL, infoLog);
+			std::cerr << "second shader\n";
+			std::cerr << infoLog << "\n";
 		}
+
 
 		unsigned int	shaderProgram;
 		shaderProgram = glCreateProgram();
 		glAttachShader(shaderProgram, vertexShader);
 		glAttachShader(shaderProgram, fragmentShader);
 		glLinkProgram(shaderProgram);
-		int success;
-		char	infoLog[512];
 		glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
 		if(!success) {
 			glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+			std::cerr << "third shader\n";
 			std::cerr << infoLog << "\n";
 		}
 

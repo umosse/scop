@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/include-revision -I/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/include
+C_INCLUDES = -I/home/umosse/lecode/scop/build/third_party/SDL/include-revision -I/home/umosse/lecode/scop/third_party/SDL/include
 
-C_FLAGS = -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
+C_FLAGS = -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fdiagnostics-color=always
 

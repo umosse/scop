@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/umosse/Documents/my_home/Documents/scop/third_party/glad/include -I/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/include -I/home/umosse/Documents/my_home/Documents/scop/include -I/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/include-revision
+C_INCLUDES = -I/home/umosse/lecode/scop/third_party/glad/include -I/home/umosse/lecode/scop/third_party/SDL/include -I/home/umosse/lecode/scop/include -I/home/umosse/lecode/scop/build/third_party/SDL/include-revision
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/umosse/Documents/my_home/Documents/scop/third_party/glad/include -I/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/include -I/home/umosse/Documents/my_home/Documents/scop/include -I/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/include-revision
+CXX_INCLUDES = -I/home/umosse/lecode/scop/third_party/glad/include -I/home/umosse/lecode/scop/third_party/SDL/include -I/home/umosse/lecode/scop/include -I/home/umosse/lecode/scop/build/third_party/SDL/include-revision
 
-CXX_FLAGS = -std=gnu++2b
+CXX_FLAGS = -std=gnu++23
 
