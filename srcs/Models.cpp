@@ -37,6 +37,8 @@ void	Models::parsing_obj(const std::string &filename)
 	}
 }
 
+
+
 Models::~Models()
 {
 }
