@@ -54,7 +54,7 @@ set_target_properties(SDL3::SDL3_test PROPERTIES
 set_property(TARGET SDL3::SDL3_test APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(SDL3::SDL3_test PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "C"
-  IMPORTED_LOCATION_NOCONFIG "/home/umosse/lecode/scop/build/third_party/SDL/libSDL3_test.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/libSDL3_test.a"
   )
 
 # Make sure the targets which have been exported in some other

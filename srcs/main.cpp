@@ -1,5 +1,6 @@
 #include "../includes/Render.hpp"
 #include "../includes/Models.hpp"
+#include "SDL3/SDL_video.h"
 #include <fstream>
 #include <string>
 
@@ -16,6 +17,7 @@ int	main(int argc, char** argv)
 		std::string	vss;
 		std::string	shadertmp;
 		std::ifstream	file("../res/basic.vert");
+
 		if (!file.is_open())
 		{
 			std::cerr << "nope\n";
@@ -27,8 +29,7 @@ int	main(int argc, char** argv)
 			vss += "\n";
 		}
 		const char *	vertexShaderSource = vss.c_str();
-		unsigned int	vertexShader;
-		vertexShader = glCreateShader(GL_VERTEX_SHADER);
+		unsigned int	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 		glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 		glCompileShader(vertexShader);
 		int success;
@@ -55,8 +56,7 @@ int	main(int argc, char** argv)
 			fs += "\n";
 		}
 		const char *	fragmentShaderSource = fs.c_str();
-		unsigned int	fragmentShader;
-		fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+		unsigned int	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 		glCompileShader(fragmentShader);
 		glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
@@ -67,8 +67,7 @@ int	main(int argc, char** argv)
 		}
 
 
-		unsigned int	shaderProgram;
-		shaderProgram = glCreateProgram();
+		unsigned int	shaderProgram = glCreateProgram();
 		glAttachShader(shaderProgram, vertexShader);
 		glAttachShader(shaderProgram, fragmentShader);
 		glLinkProgram(shaderProgram);
@@ -83,29 +82,43 @@ int	main(int argc, char** argv)
 		glDeleteShader(fragmentShader);
 
 		float vertices[] = {
-			-0.5f, -0.5f, 0.0f, // left  
-			 0.5f, -0.5f, 0.0f, // right 
-			 0.0f,  0.5f, 0.0f  // top   
-		}; 
+			0.5f,  0.5f, 0.0f,
+			0.5f, -0.5f, 0.0f,
+			-0.5f, -0.5f, 0.0f,
+			-0.5f,  0.5f, 0.0f
+		};
+		unsigned int indices[] = {
+			0, 1, 3,
+			1, 2, 3
+		};
 
 		unsigned int	VAO;
 		glGenVertexArrays(1, &VAO);
 		glBindVertexArray(VAO);
 		
-		unsigned int VBO;
+		unsigned int	VBO;
 		glGenBuffers(1, &VBO);
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+		unsigned int	EBO;
+		glGenBuffers(1, &EBO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 		
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
 		glEnableVertexAttribArray(0);
+
+		//wireframe
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
 		glUseProgram(shaderProgram);
-		// glBindBuffer(GL_ARRAY_BUFFER,0);
 		glBindVertexArray(VAO);
 
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
-
+		SDL_GL_SwapWindow(render.window);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
 		while (render.running)

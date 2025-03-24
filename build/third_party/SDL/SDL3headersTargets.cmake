@@ -49,7 +49,7 @@ unset(_expectedTargets)
 add_library(SDL3::Headers INTERFACE IMPORTED)
 
 set_target_properties(SDL3::Headers PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/umosse/lecode/scop/build/third_party/SDL/include-revision;/home/umosse/lecode/scop/third_party/SDL/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/include-revision;/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/include"
 )
 
 # This file does not depend on other imported targets which have

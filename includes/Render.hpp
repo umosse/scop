@@ -11,9 +11,9 @@ constexpr int	height = 480;
 class Render
 {
 private:
-	SDL_Window*		window;
-	SDL_GLContext	GLContext;
+SDL_GLContext	GLContext;
 public:
+	SDL_Window*		window;
 	bool	running;
 	Render();
 	~Render();

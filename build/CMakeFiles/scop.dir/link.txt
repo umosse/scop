@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/scop.dir/srcs/main.cpp.o CMakeFiles/scop.dir/srcs/Render.cpp.o CMakeFiles/scop.dir/srcs/Models.cpp.o CMakeFiles/scop.dir/third_party/glad/src/glad.c.o -o scop  -Wl,-rpath,/home/umosse/lecode/scop/build/third_party/SDL third_party/SDL/libSDL3.so.0.3.0 
+/usr/bin/c++ CMakeFiles/scop.dir/srcs/main.cpp.o CMakeFiles/scop.dir/srcs/Render.cpp.o CMakeFiles/scop.dir/srcs/Models.cpp.o CMakeFiles/scop.dir/third_party/glad/src/glad.c.o -o scop  -Wl,-rpath,/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL third_party/SDL/libSDL3.so.0.3.0 

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DUSING_GENERATED_CONFIG_H
 
-C_INCLUDES = -I/home/umosse/lecode/scop/build/third_party/SDL/include-config-/build_config -I/home/umosse/lecode/scop/third_party/SDL/src -I/home/umosse/lecode/scop/third_party/SDL/include
+C_INCLUDES = -I/home/umosse/Documents/my_home/Documents/scop/build/third_party/SDL/include-config-/build_config -I/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/src -I/home/umosse/Documents/my_home/Documents/scop/third_party/SDL/include
 
-C_FLAGS = -fvisibility=hidden -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fdiagnostics-color=always
+C_FLAGS = -fvisibility=hidden -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
 
