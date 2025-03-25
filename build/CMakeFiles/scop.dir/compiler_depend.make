@@ -204,6 +204,9 @@ CMakeFiles/scop.dir/srcs/Models.cpp.o: ../srcs/Models.cpp \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
   /usr/include/c++/12/bits/fstream.tcc \
   /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/c++/12/sstream \
   /usr/include/c++/12/bits/sstream.tcc
 
@@ -820,6 +823,8 @@ CMakeFiles/scop.dir/third_party/glad/src/glad.c.o: ../third_party/glad/src/glad.
 
 ../third_party/SDL/include/SDL3/SDL_messagebox.h:
 
+../third_party/SDL/include/SDL3/SDL_log.h:
+
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -965,8 +970,6 @@ CMakeFiles/scop.dir/third_party/glad/src/glad.c.o: ../third_party/glad/src/glad.
 /usr/include/c++/12/vector:
 
 /usr/include/c++/12/bits/streambuf_iterator.h:
-
-/usr/include/ctype.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
@@ -1268,6 +1271,12 @@ CMakeFiles/scop.dir/third_party/glad/src/glad.c.o: ../third_party/glad/src/glad.
 
 /usr/include/c++/12/bits/fstream.tcc:
 
+/usr/include/ctype.h:
+
+/usr/include/c++/12/cstring:
+
+../third_party/glad/include/KHR/khrplatform.h:
+
 ../third_party/SDL/include/SDL3/SDL_audio.h:
 
 /usr/include/c++/12/bits/basic_ios.h:
@@ -1279,8 +1288,6 @@ CMakeFiles/scop.dir/third_party/glad/src/glad.c.o: ../third_party/glad/src/glad.
 ../srcs/Render.cpp:
 
 ../third_party/glad/include/glad/glad.h:
-
-../third_party/glad/include/KHR/khrplatform.h:
 
 ../third_party/SDL/include/SDL3/SDL_begin_code.h:
 
@@ -1343,5 +1350,3 @@ CMakeFiles/scop.dir/third_party/glad/src/glad.c.o: ../third_party/glad/src/glad.
 ../third_party/SDL/include/SDL3/SDL_haptic.h:
 
 ../third_party/SDL/include/SDL3/SDL_locale.h:
-
-../third_party/SDL/include/SDL3/SDL_log.h:

@@ -5,8 +5,8 @@
 #include "SDL3/SDL_init.h"
 #include "SDL3/SDL.h"
 
-constexpr int	width = 640;
-constexpr int	height = 480;
+constexpr int	width = 1260;
+constexpr int	height = 840;
 
 class Render
 {

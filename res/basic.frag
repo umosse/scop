@@ -1,5 +1,5 @@
 #version 330 core
-out mediump vec4 FragColor;
+out vec4 FragColor;
 
 void	main()
 {

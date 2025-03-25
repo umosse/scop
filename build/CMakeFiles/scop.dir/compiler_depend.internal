@@ -205,6 +205,9 @@ CMakeFiles/scop.dir/srcs/Models.cpp.o
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h
  /usr/include/c++/12/bits/fstream.tcc
  /usr/include/c++/12/cstddef
+ /usr/include/c++/12/cstring
+ /usr/include/string.h
+ /usr/include/strings.h
  /usr/include/c++/12/sstream
  /usr/include/c++/12/bits/sstream.tcc
 
